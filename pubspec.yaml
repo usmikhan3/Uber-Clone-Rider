@@ -1,0 +1,54 @@
+name: uber_rider
+description: Rider Apllication
+
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.0
+  firebase_core:
+  firebase_auth:
+  firebase_database:
+  fluttertoast: ^7.1.6
+  google_maps_flutter:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+
+# The following section is specific to Flutter.
+flutter:
+
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+    - assets/sounds/
+
+
+
+  fonts:
+    - family: Signatra
+      fonts:
+        - asset: assets/fonts/Signatra.ttf
+    - family: Brand-Regular
+      fonts:
+        - asset: assets/fonts/bolt-regular.ttf
+    - family: Brand Bold
+      fonts:
+        - asset: assets/fonts/bolt-semibold.ttf
+
