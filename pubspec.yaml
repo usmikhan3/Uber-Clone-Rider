@@ -21,6 +21,11 @@ dependencies:
   firebase_database:
   fluttertoast: ^7.1.6
   google_maps_flutter:
+  geolocator:
+  http:
+  provider:
+  flutter_polyline_points:
+  font_awesome_flutter:
 
 dev_dependencies:
   flutter_test:
