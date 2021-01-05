@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uber_rider/assistants/size_config.dart';
 
 class ProgressDialog extends StatelessWidget {
 
@@ -24,7 +25,7 @@ class ProgressDialog extends StatelessWidget {
 
               CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(Colors.black),),
 
-              FittedBox(child: Text(message, style: TextStyle(color: Colors.black, fontSize: 12.0),))
+              FittedBox(child: Text(message, style: TextStyle(color: Colors.black, fontSize: 1.55440414 * SizeConfig.textMultiplier /*12*/),))
             ],
           ),
         ),

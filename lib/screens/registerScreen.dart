@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:uber_rider/assistants/size_config.dart';
 import 'package:uber_rider/main.dart';
 import 'package:uber_rider/screens/mainScreen.dart';
 import '../widgets/progressIndicator.dart';
@@ -72,15 +73,14 @@ class RegisterScreen extends StatelessWidget {
               Center(
                 child: Image(
                   image: AssetImage("assets/images/logo.png"),
-                  height: 400,
-                  width: 250,
+                  height: 51.8134715 * SizeConfig.heightMultiplier, //400,
+                  width: 69.444444  * SizeConfig.widthMultiplier, //250
                 ),
               ),
-
               //TODO: LOGIN TEXT
               Text(
                 "Register as a rider",
-                style: TextStyle(fontSize: 20, fontFamily: "Brand Bold"),
+                style: TextStyle(fontSize: 2.59067357 * SizeConfig.textMultiplier /*20*/, fontFamily: "Brand Bold"),
               ),
 
               //TODO: FORM FIELD
@@ -95,53 +95,53 @@ class RegisterScreen extends StatelessWidget {
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
                           labelText: "Name",
-                          labelStyle: TextStyle(fontSize: 14.0),
+                          labelStyle: TextStyle(fontSize: 1.81347150 * SizeConfig.textMultiplier /*14.0*/),
                           hintText: "Enter your name",
                           hintStyle:
-                              TextStyle(color: Colors.grey, fontSize: 10.0)),
-                      style: TextStyle(fontSize: 14.0),
+                              TextStyle(color: Colors.grey, fontSize: 1.29533678 * SizeConfig.textMultiplier /*10.0*/)),
+                      style: TextStyle(fontSize: 1.81347150 * SizeConfig.textMultiplier /*14.0*/),
                     ),
                     TextField(
                       controller: emailController,
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                           labelText: "Email",
-                          labelStyle: TextStyle(fontSize: 14.0),
+                          labelStyle: TextStyle(fontSize: 1.81347150 * SizeConfig.textMultiplier /*14.0*/),
                           hintText: "Enter your Email Address",
                           hintStyle:
-                              TextStyle(color: Colors.grey, fontSize: 10.0)),
-                      style: TextStyle(fontSize: 14.0),
+                              TextStyle(color: Colors.grey, fontSize: 1.29533678 * SizeConfig.textMultiplier /*10.0*/)),
+                      style: TextStyle(fontSize: 1.81347150 * SizeConfig.textMultiplier /*14.0*/),
                     ),
                     TextField(
                       controller: phoneController,
                       keyboardType: TextInputType.phone,
                       decoration: InputDecoration(
                           labelText: "Phone",
-                          labelStyle: TextStyle(fontSize: 14.0),
+                          labelStyle: TextStyle(fontSize: 1.81347150 * SizeConfig.textMultiplier /*14.0*/),
                           hintText: "Enter your phone Number",
                           hintStyle:
-                              TextStyle(color: Colors.grey, fontSize: 10.0)),
-                      style: TextStyle(fontSize: 14.0),
+                              TextStyle(color: Colors.grey, fontSize:  1.29533678 * SizeConfig.textMultiplier /*10.0*/)),
+                      style: TextStyle(fontSize: 1.81347150 * SizeConfig.textMultiplier /*14.0*/),
                     ),
                     TextField(
                       controller: passwordController,
                       obscureText: true,
                       decoration: InputDecoration(
                           labelText: "Password",
-                          labelStyle: TextStyle(fontSize: 14.0),
+                          labelStyle: TextStyle(fontSize: 1.81347150 * SizeConfig.textMultiplier /*14.0*/),
                           hintText: "Enter your Password",
                           hintStyle:
-                              TextStyle(color: Colors.grey, fontSize: 10.0)),
-                      style: TextStyle(fontSize: 14.0),
+                              TextStyle(color: Colors.grey, fontSize:  1.29533678 * SizeConfig.textMultiplier /*10.0*/)),
+                      style: TextStyle(fontSize: 1.81347150 * SizeConfig.textMultiplier /*14.0*/),
                     ),
                     SizedBox(
-                      height: 10.0,
+                      height:  1.29533678 * SizeConfig.heightMultiplier /*10.0*/,
                     ),
                     RaisedButton(
                       color: Colors.yellow,
                       textColor: Colors.black,
                       child: Container(
-                        height: 50.0,
+                        height: 6.4766839 * SizeConfig.heightMultiplier  /*50.0*/,
                         child: Center(
                           child: Text(
                             "Create Account",

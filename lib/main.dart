@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:uber_rider/assistants/size_config.dart';
 import 'package:uber_rider/dataHandler/appData.dart';
 import 'package:uber_rider/screens/loginScreen.dart';
 import 'package:uber_rider/screens/mainScreen.dart';
@@ -23,19 +25,31 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context)=>AppData(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Uber Rider',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
-        initialRoute: MainScreen.idScreen,
-        routes: {
-          RegisterScreen.idScreen : (_)=>RegisterScreen(),
-          LoginScreen.idScreen : (_)=>LoginScreen(),
-          MainScreen.idScreen : (_)=>MainScreen(),
-        },
+      child: LayoutBuilder(
+        builder: (context, constraints){
+          return OrientationBuilder(
+
+              builder: (context, orientation){
+                SizeConfig().init(constraints, orientation);
+            return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              title: 'Uber Rider',
+              theme: ThemeData(
+                primarySwatch: Colors.blue,
+                visualDensity: VisualDensity.adaptivePlatformDensity,
+              ),
+              initialRoute:FirebaseAuth.instance.currentUser == null ? LoginScreen.idScreen : MainScreen.idScreen,
+              routes: {
+                RegisterScreen.idScreen : (_)=>RegisterScreen(),
+                LoginScreen.idScreen : (_)=>LoginScreen(),
+                MainScreen.idScreen : (_)=>MainScreen(),
+              },
+            );
+          },
+
+          );
+        }
+
       ),
     );
   }

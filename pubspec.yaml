@@ -26,6 +26,7 @@ dependencies:
   provider:
   flutter_polyline_points:
   font_awesome_flutter:
+  animated_text_kit:
 
 dev_dependencies:
   flutter_test:
